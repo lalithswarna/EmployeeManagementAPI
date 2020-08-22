@@ -29,12 +29,16 @@ Install .Net Core 3.1.2 SDK
   * GetEmployeeByID:
   
      HTTPMethod: GET
+     
      Url: http://localhost:50858/api/employees/6
   
   * CreateNewEmployee:
-  * HTTPMethod: POST
-  * Url: http://localhost:50858/api/employees
-  * Body:
+   
+    HTTPMethod: POST
+  
+    Url: http://localhost:50858/api/employees
+  
+    Body:
     {
      "firstName": "Lalith",
     "lastName": "Swarna",
@@ -42,9 +46,12 @@ Install .Net Core 3.1.2 SDK
     }
   
   * UpdateEmployee:
-  * HTTPMethod: PUT
-  * Url: http://localhost:50858/api/employees
-  * Body:
+    
+    HTTPMethod: PUT
+    
+    Url: http://localhost:50858/api/employees
+    
+    Body:
         {
           "id": 1
           "firstName": "Lalith",
@@ -53,6 +60,9 @@ Install .Net Core 3.1.2 SDK
          }
 
   * DeleteEmployee:
-  * HTTPMethod: DELETE
-  * Url: http://localhost:50858/api/employees/6
-  * Mention the id of the employee to be deleted in the url
+     
+     HTTPMethod: DELETE
+     
+     Url: http://localhost:50858/api/employees/6
+     
+     Mention the id of the employee to be deleted in the url
