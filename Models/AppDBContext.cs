@@ -18,6 +18,7 @@ namespace EmployeeManagementAPI.Models
 
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -38,6 +39,13 @@ namespace EmployeeManagementAPI.Models
                 Designation = "Technical Lead",
                 Gender = Gender.Male,
                 DepartmentID = 101,
+            });
+
+            modelBuilder.Entity<User>().HasData(new User
+            {
+                UserId = 501,
+                UserName = "lalith",
+                Password = "lalith"
             });
 
         }

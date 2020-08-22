@@ -14,22 +14,17 @@ namespace EmployeeManagementAPI.Services
     public class AuthenticateService : IAuthenticateService
     {
         public readonly AppSettings _appSettings;
-        public AuthenticateService(IOptions<AppSettings> appsettings)
+        private readonly AppDBContext _appDbContext;
+        public AuthenticateService(IOptions<AppSettings> appsettings, AppDBContext appDBContext)
         {
             _appSettings = appsettings.Value;
+            _appDbContext = appDBContext;
         }
-        private List<User> users = new List<User>()
-        {
-            new User
-            {
-                UserName = "Lalith",
-                Password = "pass5word"
-            }
-        };
 
         public User Authenticate(string username, string password)
         {
-            var user = users.SingleOrDefault(x => (x.UserName == username) && (x.Password == password));
+            var user = _appDbContext.Users
+              .FirstOrDefault(e => e.UserName.ToLower() == username.ToLower() && e.Password == password);
 
             if (user == null)
             {
