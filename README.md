@@ -22,14 +22,14 @@ Install .Net Core 3.1.2 SDK
  
   * GetAllEmployees:
   
-  * HTTPMethod: GET
+    HTTPMethod: GET
   
-  * Url: http://localhost:50858/api/employees
+    Url: http://localhost:50858/api/employees
   
   * GetEmployeeByID:
   
-  * HTTPMethod: GET
-  * Url: http://localhost:50858/api/employees/6
+     HTTPMethod: GET
+     Url: http://localhost:50858/api/employees/6
   
   * CreateNewEmployee:
   * HTTPMethod: POST
