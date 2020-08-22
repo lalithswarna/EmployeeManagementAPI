@@ -6,9 +6,12 @@ Install .Net Core 3.1.2 SDK
     Microsoft.EntityFrameworkCore.Tools(3.1.7)
     Microsoft.AspNetCore.Authentication.JWTBearer(3.1.7)
     Microsoft.ASPNetCore.Cors(2.2.0)
-Build and run the application
-For a Base url: http://localhost:50858
-Here are the API's:
+
+ Build and run the application
+
+ For a Base url: http://localhost:50858
+
+ Here are the API's:
   GetAllEmployees:
   Method: GET
   Url: http://localhost:50858/api/employees
